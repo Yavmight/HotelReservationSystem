@@ -27,7 +27,7 @@ public class Room {
         return isOccupied;
     }
 
-    
+
     //add setters
     public void setRoomNum(int roomNum) {
         this.roomNum = roomNum;
