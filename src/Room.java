@@ -45,4 +45,8 @@ public class Room {
         isOccupied = occupied;
     }
 
+    public double calculatePrice() {
+        return roomPrice + (roomPrice * VAT);
+    }
+
 }
