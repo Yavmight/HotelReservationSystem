@@ -1,23 +1,24 @@
 
 public class DeluxeRoom extends Room {
 
-    private double serviceFee;
+    private double DeluxeFee;
 
     public DeluxeRoom(int roomNum, double roomPrice, boolean isOccupied, double serviceFee) {
         super(roomNum, roomPrice, isOccupied);
-        this.serviceFee = serviceFee;
+        this.DeluxeFee = serviceFee;
     }
 
-    public double getServiceFee() {
-        return serviceFee;
+    public double getDeluxeFee() {
+        return DeluxeFee;
     }
 
-    public void setServiceFee(double serviceFee) {
-        this.serviceFee = serviceFee;
+    public void setDeluxeFee(double DeluxeFee ) {
+        this.DeluxeFee = DeluxeFee;
     }
 
-    @Override
-    public double calculatePrice() {
-        return super.calculatePrice() + serviceFee;
+
+    public double calculatePrice(int nights, double vatRate) {
+        double subtotal = (getRoomPrice() + getDeluxeFee()) * nights;
+        return subtotal + (subtotal * vatRate);
     }
 }
