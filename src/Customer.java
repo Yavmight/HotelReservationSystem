@@ -3,9 +3,9 @@ public class Customer {
     private String Lname;
     private int age;
     private String  email;
-    private int  phone;
+    private String  phone;
 
-    public Customer(String Fname,String Lname,int age,String email, int phone){
+    public Customer(String Fname,String Lname,int age,String email, String phone){
         this.Fname=Fname;
         this.Lname=Lname;
         this.age=age;
@@ -29,7 +29,7 @@ public class Customer {
         return email;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
@@ -50,7 +50,7 @@ public class Customer {
         this.email = email;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 }
