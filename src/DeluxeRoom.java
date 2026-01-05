@@ -1,10 +1,9 @@
-
 public class DeluxeRoom extends Room {
 
     private double DeluxeFee;
 
     public DeluxeRoom(int roomNum, double roomPrice, boolean isOccupied, double serviceFee) {
-        super(roomNum, roomPrice, isOccupied);
+        super(roomNum,isOccupied);
         this.DeluxeFee = serviceFee;
     }
 
