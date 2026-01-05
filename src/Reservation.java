@@ -46,8 +46,15 @@ public class Reservation {
         return checkIn.plusDays(nights);
     }
 
-
-
-
-
+    public void ReservationDetails() {
+        System.out.println("*** RESERVATION DETAILS ***");
+        System.out.println("reservation ID : " + reservationId);
+        System.out.println("Customer : " + customer);
+        System.out.println("Room     : " + room.getRoomNum() );
+        System.out.println("Check In : " + checkIn);
+        System.out.println("Check Out: " + getCheckOut());
+        System.out.println("Nights   : " + nights);
+        System.out.println("Payment  : " + payment);
+        System.out.println("***************************");
+    }
 }
