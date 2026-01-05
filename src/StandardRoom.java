@@ -6,6 +6,18 @@ public class StandardRoom extends Room {
         this.baseRoomPrice = baseRoomPrice;
     }
 
-    public double getBaseRoomPrice() { return baseRoomPrice; }
-    public void setBaseRoomPrice(double baseRoomPrice) { this.baseRoomPrice = baseRoomPrice; }
+    public double getBaseRoomPrice() {
+        return baseRoomPrice;
+    }
+
+    public void setBaseRoomPrice(double baseRoomPrice) {
+        this.baseRoomPrice = baseRoomPrice;
+    }
+
+
+    public double calculatePrice(int nights, double vatRate) {
+        double subtotal = getBaseRoomPrice() * nights;
+        return subtotal + (subtotal * vatRate);
+    }
+
 }
