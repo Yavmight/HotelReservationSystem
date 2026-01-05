@@ -3,18 +3,16 @@ public class Customer {
     private String Lname;
     private int age;
     private String  email;
-    private int phone;
+    private int  phone;
 
     public Customer(String Fname,String Lname,int age,String email, int phone){
         this.Fname=Fname;
-        this.Lname=Fname;
+        this.Lname=Lname;
         this.age=age;
         this.email=email;
         this.phone=phone;
     }
  //add getters
-
-
     public String getFname() {
         return Fname;
     }
