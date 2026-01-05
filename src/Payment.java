@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class Payment {
 
-    public enum PaymentMethod { CASH, CARD }
+    public enum PaymentMethod {CASH, CARD}
 
     private PaymentMethod paymentMethod;
     private double amount;
@@ -32,5 +32,23 @@ public class Payment {
 
     public LocalDateTime getPaidAt() {
         return paidAt;
+    }
+
+
+    public void pay() {
+        if (isPaid) throw new IllegalStateException("Payment already completed.");
+        isPaid = true;
+        paidAt = LocalDateTime.now();
+        System.out.println("Payment Successful");
+    }
+
+
+    public void showReceipt() {
+        System.out.println("*** PAYMENT RECEIPT ***");
+        System.out.println("Method : " + getMethod());
+        System.out.println("Amount : " + getAmount());
+        System.out.println("Paid   : " + isPaid());
+        System.out.println("Paid At: " + getPaidAt());
+        System.out.println("***********************");
     }
 }
