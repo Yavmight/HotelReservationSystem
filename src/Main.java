@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Hotel hotel = new Hotel("Aurora Hotel", "Baghdad", 10, 0.20);
+        Hotel hotel = new Hotel("Karradah Hotel", "Baghdad", 7, 0.20);
 
         hotel.addRoom(new StandardRoom(101, 80));
         hotel.addRoom(new StandardRoom(102, 90));
@@ -68,8 +68,8 @@ public class Main {
         System.out.print("Last name: ");
         String lname = sc.nextLine();
 
-        System.out.print("Age: ");
-        int age = readInt(sc);
+        System.out.print("Date of Birth (YYYY-MM-DD): ");
+        LocalDate dob = LocalDate.parse(sc.nextLine());
 
         System.out.print("Email: ");
         String email = sc.nextLine();
@@ -77,7 +77,8 @@ public class Main {
         System.out.print("Phone: ");
         String phone = sc.nextLine();
 
-        Customer customer = new Customer(fname, lname, age, email, phone);
+        Customer customer = new Customer(fname, lname, dob, email, phone);
+
 
         System.out.println("\n--- BOOKING INFO ---");
         System.out.print("Room number: ");
@@ -98,10 +99,10 @@ public class Main {
 
         Reservation reservation = hotel.bookRoom(customer, roomNum, checkIn, nights, method);
 
-        System.out.println("\n✅ Booking Successful!");
+        System.out.println("\n Booking Successful!");
         reservation.ReservationDetails();
 
-        // If you want receipt printed separately:
+        // to print the receipts separately:
         reservation.getPayment().showReceipt();
     }
 
@@ -111,8 +112,8 @@ public class Main {
 
         boolean cancelled = hotel.cancelReservation(id);
 
-        if (cancelled) System.out.println("✅ Reservation cancelled successfully.");
-        else System.out.println("❌ Reservation not found.");
+        if (cancelled) System.out.println("Reservation cancelled successfully.");
+        else System.out.println("Reservation not found.");
     }
 
     private static void viewReservationFlow(Hotel hotel, Scanner sc) {
@@ -128,7 +129,7 @@ public class Main {
         }
     }
 
-    // input Helper
+    // Helper for input
     private static int readInt(Scanner sc) {
         while (true) {
             String s = sc.nextLine().trim();

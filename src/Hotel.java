@@ -23,18 +23,40 @@ public class Hotel {
     }
 
 
-    public String getHotelName() { return hotelName; }
-    public String getHotelLocation() { return hotelLocation; }
-    public int getBuildingStories() { return buildingStories; }
-    public double getVatRate() { return vatRate; }
+    public String getHotelName() {
+        return hotelName;
+    }
+
+    public String getHotelLocation() {
+        return hotelLocation;
+
+    }
+
+    public int getBuildingStories() {
+        return buildingStories;
+    }
+
+    public double getVatRate() {
+        return vatRate;
+    }
 
 
-    public void setHotelName(String hotelName) { this.hotelName = hotelName; }
-    public void setHotelLocation(String hotelLocation) { this.hotelLocation = hotelLocation; }
-    public void setBuildingStories(int buildingStories) { this.buildingStories = buildingStories; }
-    public void setVatRate(double vatRate) { this.vatRate = vatRate; }
+    public void setHotelName(String hotelName) {
+        this.hotelName = hotelName;
+    }
 
+    public void setHotelLocation(String hotelLocation) {
+        this.hotelLocation = hotelLocation;
+    }
 
+    public void setBuildingStories(int buildingStories) {
+        this.buildingStories = buildingStories;
+
+    }
+
+    public void setVatRate(double vatRate) {
+        this.vatRate = vatRate;
+    }
 
 
     public void addRoom(Room room) {
@@ -60,7 +82,6 @@ public class Hotel {
 
     public Reservation bookRoom(Customer customer, int roomNum, LocalDate checkIn, int nights, Payment.PaymentMethod method) {
         if (nights <= 0) throw new IllegalArgumentException("Nights must be >= 1");
-
         Room room = findRoomByNumber(roomNum);
         if (room == null) throw new IllegalArgumentException("Room not found.");
         if (!room.isAvailable()) throw new IllegalStateException("Room is not available.");

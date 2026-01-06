@@ -43,9 +43,8 @@ public class SysTester {
         Hotel hotel = new Hotel("Hotel Karradah", "Baghdad", 7, 0.2);
         hotel.addRoom(new StandardRoom(101, 100));
 
-         Customer c = new Customer("Ali", "Hassan", 22, "ali@test.com", "0770000000");
+         Customer c = new Customer("Ali", "Hassan",LocalDate.of(2000, 6, 15) , "alihassan71@gmail.com", "07852213348");
          Reservation r = hotel.bookRoom(c, 101, LocalDate.now(), 1, Payment.PaymentMethod.CARD);
-
           boolean cancelled = hotel.cancelReservation(r.getReservationId());
            assertTrue(cancelled);
            assertTrue(hotel.getAvailableRooms().contains(r.getRoom()));

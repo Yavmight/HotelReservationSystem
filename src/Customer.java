@@ -1,14 +1,15 @@
+import java.time.LocalDate;
 public class Customer {
     private String Fname;
     private String Lname;
-    private int age;
+    private final LocalDate DoB;
     private String  email;
     private String  phone;
 
-    public Customer(String Fname,String Lname,int age,String email, String phone){
+    public Customer(String Fname,String Lname,LocalDate DoB,String email, String phone){
         this.Fname=Fname;
         this.Lname=Lname;
-        this.age=age;
+        this.DoB=DoB;
         this.email=email;
         this.phone=phone;
     }
@@ -21,8 +22,8 @@ public class Customer {
         return Lname;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getDoB() {
+        return DoB;
     }
 
     public String getEmail() {
@@ -42,8 +43,8 @@ public class Customer {
         Lname = lname;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public LocalDate setDoB() {
+        return DoB;
     }
 
     public void setEmail(String email) {
