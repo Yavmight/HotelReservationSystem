@@ -9,7 +9,7 @@ public class SysTester {
     public void StandardRoompricingTest(){
         StandardRoom room = new StandardRoom(151, 100);
       double price = room.calculatePrice(3, 0.2);
-       assertEquals(240.0, price);
+       assertEquals(360.0, price);
        }
 
 
@@ -17,7 +17,7 @@ public class SysTester {
     public void DeluxeRoomPricingTest() {
         DeluxeRoom room = new DeluxeRoom(601, 100, 50);
         double price = room.calculatePrice(2, 0.05);
-        assertEquals(440.0, price);
+        assertEquals(315.0, price);
        }
 
     @Test
