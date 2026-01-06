@@ -46,6 +46,22 @@ public class Reservation {
         return checkIn.plusDays(nights);
     }
 
+
+    public String toCsvLine() {
+        String customerName = customer.getFname() + " " + customer.getLname();
+
+        return reservationId + "," +
+                room.getRoomNum() + "," +
+                room.getRoomType() + "," +
+                customerName + "," +
+                customer.getEmail() + "," +
+                checkIn + "," +
+                nights + "," +
+                payment.getMethod() + "," +
+                payment.getAmount() + "," +
+                payment.getPaidAt();
+    }
+
     public void ReservationDetails() {
         System.out.println("*** RESERVATION DETAILS ***");
         System.out.println("reservation ID : " + reservationId);

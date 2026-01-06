@@ -31,6 +31,13 @@ public class Main {
                     case 2 -> bookRoomFlow(hotel, sc);
                     case 3 -> cancelReservationFlow(hotel, sc);
                     case 4 -> viewReservationFlow(hotel, sc);
+                    case 5 -> {
+                        System.out.print("\nEnter reservation ID (example: R1): ");
+                        String id = sc.nextLine();
+                        hotel.printReservationFromCsv(id);
+                    }
+                    case 6 -> hotel.printAllReservationsFromCsv();
+
                     case 0 -> {
                         System.out.println("Goodbye!");
                         return;
