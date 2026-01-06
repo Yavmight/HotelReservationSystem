@@ -1,23 +1,28 @@
 public class StandardRoom extends Room {
-    private double baseRoomPrice;
 
-    public StandardRoom(int roomNum, double roomPrice, boolean isOccupied, double serviceFee, double baseRoomPrice) {
-        super(roomNum, roomPrice, isOccupied);
-        this.baseRoomPrice = baseRoomPrice;
+    private double basePrice;
+
+    public StandardRoom(int roomNum, double basePrice) {
+        super(roomNum);
+        this.basePrice = basePrice;
     }
 
-    public double getBaseRoomPrice() {
-        return baseRoomPrice;
+    public double getBasePrice() {
+        return basePrice;
     }
 
-    public void setBaseRoomPrice(double baseRoomPrice) {
-        this.baseRoomPrice = baseRoomPrice;
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
     }
 
-
+    @Override
     public double calculatePrice(int nights, double vatRate) {
-        double subtotal = getBaseRoomPrice() * nights;
+        double subtotal = basePrice * nights;
         return subtotal + (subtotal * vatRate);
     }
 
+    @Override
+    public String getRoomType() {
+        return "Standard";
+    }
 }

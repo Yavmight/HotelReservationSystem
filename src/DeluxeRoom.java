@@ -27,4 +27,4 @@ public class DeluxeRoom extends Room {
     public String getRoomType() {
         return "Deluxe";
     }
-}
+}   
