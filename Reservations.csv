@@ -1,4 +1,4 @@
-reservationId,roomNum,roomType,customerName,email,checkIn,nights,paymentMethod,amount,paidAt
+reservationId,roomNum,roomType,customerName,email,,checkIn,nights,paymentMethod,amount,paidAt
 R1,101,Standard,Ali Hassan,ali1@test.com,2026-01-01,2,CARD,192.0,2026-01-01T10:05
 R2,102,Standard,Sara Omar,sara2@test.com,2026-01-02,3,CASH,324.0,2026-01-02T11:10
 R3,103,Standard,Noor Karim,noor3@test.com,2026-01-03,1,CARD,108.0,2026-01-03T12:15

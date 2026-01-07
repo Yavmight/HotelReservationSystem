@@ -16,12 +16,13 @@ public class Main {
 
         while (true) {
             System.out.println("\n**** HOTEL RESERVATION SYSTEM ****");
-            System.out.println("1) Search available rooms");
-            System.out.println("2) Book a room");
-            System.out.println("3) Cancel reservation");
-            System.out.println("4) View reservation details");
-            System.out.println("0) Exit");
-            System.out.print("Choose: ");
+            System.out.println("1-Search available rooms");
+            System.out.println("2-Book a room");
+            System.out.println("3-Cancel reservation");
+            System.out.println("4-View reservation details");
+            System.out.print("5-Enter reservation ID (e.g R1): \n");
+            System.out.println("0-Exit");
+            System.out.print("Pick a number: ");
 
             int choice = readInt(sc);
 
